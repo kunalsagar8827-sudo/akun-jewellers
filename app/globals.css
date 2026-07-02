@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf6ef;
+  color: #1f1b16;
+}
+
+.tilt-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+.tilt-card:hover {
+  transform: perspective(800px) rotateX(2deg) rotateY(-3deg) translateY(-6px) scale(1.02);
+}
+
+.btn-gold {
+  @apply inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-dark text-white font-medium tracking-wide px-7 py-3 rounded-sm transition-all duration-300 shadow-card hover:shadow-card-hover;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 border border-gold text-gold hover:bg-gold hover:text-white font-medium tracking-wide px-7 py-3 rounded-sm transition-all duration-300;
+}
+
+.section-label {
+  @apply text-gold text-sm tracking-[0.2em] font-medium uppercase;
+}
+
+.divider-diamond {
+  @apply flex items-center justify-center gap-3 my-3;
+}
+.divider-diamond::before, .divider-diamond::after {
+  content: "";
+  height: 1px;
+  width: 48px;
+  background: #a8823a;
+  opacity: 0.5;
+}
